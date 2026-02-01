@@ -1,3 +1,3 @@
-module github.com/BFFTeam/YeahMusic
+module YeahMusic
 
 go 1.24.4
