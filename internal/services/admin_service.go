@@ -1,17 +1,15 @@
 package services
 
-import "github.com/BFFTeam/YeahMusic/internal/models"
+import "YeahMusic/internal/models"
 
-type AdminService struct{}
-
-func (s *AdminService) AddSong(song models.Song) error {
-	return nil
+type AdminService struct {
+	store *Store
 }
 
-func (s *AdminService) UpdateSong(song models.Song) error {
-	return nil
+func NewAdminService(store *Store) *AdminService {
+	return &AdminService{store: store}
 }
 
-func (s *AdminService) DeleteSong(songID int) error {
-	return nil
+func (a *AdminService) Ping() *models.Admin {
+	return &models.Admin{ID: 1, Email: "admin@local", Role: "admin"}
 }
